@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="icon/comic-book.png" type="image/icon type">
+    
+    <link rel="stylesheet" href="style/style.css">
+    <title>Pixel Art App</title>
+</head>
+<body>
+    <div class="popup" id="popup">
+        <p>Please Copy the code below to your main.cpp</p>
+        <button id="closepopup">Close</button>
+        <div class="code"><textarea id="codeViewer" height="500px" width="500px" id="generatedCode"></textarea></div>
+    </div>
+    <div class="container">
+        <div class="top-nav">
+            <h1>PIXSHEET</h1>
+        </div>
+        <div class="sidenav">
+            <div class="draw_form">
+                <form action="">
+                    <input id="color" type="color" name="color">
+                    <input id="erase" type="checkbox" name="erase" class="erase">
+                    <input id="line" type="checkbox" name="line" class="line" checked>
+                    <input id="poly" type="checkbox" name="poly" class="poly">
+                </form>
+            </div>        
+        </div>
+        
+        <div class="canvas-area">
+            <img src="sampleImage/sample.jpg" alt="" id="refImage">
+            <canvas height="506" width="900" id="refCanvas"></canvas>
+            <canvas height="506" width="900" id="mainCanvas"></canvas>   
+            <canvas height="506" width="900" id="tempCanvas"></canvas>
+        </div>
+
+          
+        <div class="right-nav">
+            <div class="layers" id="layers_panel">
+                
+            </div>            
+            <div class="opacity_slider">
+                <form action="" id="selectSheet">
+                    <input type="range" min="0" max="100" value="100" id="opacitySlider" name="opacitySlider">
+                    <input type="text" value="100" name="opacityText" id="opacityText">
+                                       
+                </form>
+            </div>
+
+            <input type="file" id="loadDrawing" class="loadDrawing" value="Load Drawing">
+            <button id="download" class="download">Save drawing</button>            
+            <button id="generate" class="generate">Generate Opengl Code</button>
+        </div>
+        <div class="final-canvas">
+            <button id="close_preview">Close</button>
+            <canvas height="512px" width="512px" id="finalCanvas"></canvas>
+        </div>  
+    </div>
+    <script src="js/savedCode.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/save.js"></script>
+    <script src="js/line.js"></script>
+    <script src="js/polygon.js"></script>
+    <script src="js/artboard.js"></script>
+    <script src="js/generateCode.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
