@@ -470,4 +470,19 @@
     width: 400px;
   }
 }
+.custom-upload-btn {
+    display: inline-block;
+    padding: 10px 16px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 14px;
+    transition: background 0.3s ease;
+  }
+  .custom-upload-btn:hover {
+    background: #45a049;
+  }
+
 /*# sourceMappingURL=style.css.map */
